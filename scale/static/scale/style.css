@@ -21,9 +21,9 @@ h1 {
 
 .content {
     text-align: center;
-    padding: 50px;
+    padding: 50px 10px 50px 10px;
     margin: auto;
-    width: 75%;
+    width: 95%;
 }
 
 #container {

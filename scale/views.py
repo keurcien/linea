@@ -42,15 +42,37 @@ def chart_data(request):
         )
 
     chart = {
-        'chart': { 'type': 'line', 'style': { 'fontFamily': 'Roboto'} },
-        'title': { 'text': 'Courbes de poids', 'style': { 'fontSize': '20px', 'fontWeight': 700 }},
+        'chart': { 'type': 'line', 'style': { 'fontFamily': 'Roboto'}, 'height': 600 },
+        'title': { 'text': 'Courbes de poids', 'style': { 'fontSize': 25, 'fontWeight': 700 }},
         'series': chart_series,
         'xAxis': {
             'categories': dates_,
-            'gridLineWidth': 1
+            'gridLineWidth': 1,
+            'labels': {
+                'style': {
+                    'fontSize': 12,
+                    'fontWeight': 700
+                }
+            }
         },
         'yAxis': {
-            'title': { 'text': 'Poids (kg)', 'style': { 'fontSize': '15px', 'fontWeight': 700 }},
+            'title': { 'text': 'Poids (kg)', 'style': { 'fontSize': 20, 'fontWeight': 700 }},
+            'labels': {
+                'style': {
+                    'fontSize': 12,
+                    'fontWeight': 700
+                }
+            }
+        },
+        'legend': {
+            'itemStyle': {
+                'fontSize': 15 
+            }
+        },
+        'tooltip': {
+            'style': {
+                'fontSize': 18
+            }
         },
         'plotOptions': {
             'series': {

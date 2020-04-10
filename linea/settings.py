@@ -26,6 +26,7 @@ SECRET_KEY = 'u16&d)%-h53_ddzf7cnv)@*i$8a_o%c0=5o+0ezf_qg%x@=qta'
 DEBUG = True
 
 ALLOWED_HOSTS = [
+    '127.0.0.1',
     'kluu.fr'
 ]
 
