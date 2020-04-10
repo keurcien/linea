@@ -10,7 +10,7 @@
 <body>
   <div class="banner">
     <h1>linea</h1>
-    <a href="/admin" class="login"><i class="fa fa-user"></i></a>
+    <a href="{% url 'admin:index' %}" class="login"><i class="fa fa-user"></i></a>
   </div>
   <div class="content">
     <div id="container" data-url="{% url 'chart_data' %}"></div>
