@@ -123,4 +123,8 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
-STATIC_URL = 'static/'
+
+if os.getenv('ENV') == 'o2switch':
+    STATIC_URL = 'static/'
+else:
+    STATIC_URL = '/static/'

@@ -5,10 +5,12 @@
 <head>
   <meta charset="utf-8">
   <link rel="stylesheet" type="text/css" href="{% static 'scale/style.css' %}">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
   <div class="banner">
     <h1>linea</h1>
+    <a href="/admin" class="login"><i class="fa fa-user"></i></a>
   </div>
   <div class="content">
     <div id="container" data-url="{% url 'chart_data' %}"></div>
