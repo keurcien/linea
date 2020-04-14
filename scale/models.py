@@ -18,4 +18,3 @@ class Weight(models.Model):
 
     def __str__(self):
         return '{} - {}: {}kgs'.format(self.date, self.user.name, self.value)
-    
