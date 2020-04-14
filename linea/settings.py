@@ -57,9 +57,7 @@ ROOT_URLCONF = 'linea.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [
-            os.path.join(BASE_DIR, '/scale/templates')
-        ],
+        'DIRS': [],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -80,8 +78,11 @@ WSGI_APPLICATION = 'linea.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'luke6643_linea',
+	'USER': 'luke6643_dbuser',
+	'HOST': 'localhost',
+	'PASSWORD': 't@Uw3e@b&rak'
     }
 }
 
@@ -123,4 +124,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+
 STATIC_URL = '/static/'
+if os.getenv('ENV'):
+    STATIC_URL = 'linea/static/'
