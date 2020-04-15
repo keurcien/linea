@@ -43,7 +43,7 @@ def chart_data(request):
 
     chart = {
         'chart': { 'type': 'line', 'style': { 'fontFamily': 'Roboto'}, 'height': 600 },
-        'title': { 'text': 'Courbes de poids', 'style': { 'fontSize': 25, 'fontWeight': 700 }},
+        'title': { 'text': 'Courbes de masse', 'style': { 'fontSize': 25, 'fontWeight': 700 }},
         'series': chart_series,
         'xAxis': {
             'categories': dates_,
@@ -56,7 +56,7 @@ def chart_data(request):
             }
         },
         'yAxis': {
-            'title': { 'text': 'Poids (kg)', 'style': { 'fontSize': 20, 'fontWeight': 700 }},
+            'title': { 'text': 'Masse (kg)', 'style': { 'fontSize': 20, 'fontWeight': 700 }},
             'labels': {
                 'style': {
                     'fontSize': 12,
