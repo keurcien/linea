@@ -123,8 +123,11 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
+import mimetypes
+mimetypes.add_type("text/css", ".css", True)
+
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
 STATIC_URL = '/static/'
 if os.getenv('ENV'):
-    STATIC_URL = 'linea/static/'
+    STATIC_URL = '/linea/static/'
