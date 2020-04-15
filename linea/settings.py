@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/3.0/ref/settings/
 """
 
 import os
+import json
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -76,13 +77,16 @@ WSGI_APPLICATION = 'linea.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases
 
+with open(os.path.join(BASE_DIR, 'linea/config.json'), 'r') as f:
+    CONFIG = json.load(f)
+
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'luke6643_linea',
-	'USER': 'luke6643_dbuser',
-	'HOST': 'localhost',
-	'PASSWORD': 't@Uw3e@b&rak'
+        'NAME': CONFIG.get('DATABASE'),
+	    'USER': CONFIG.get('USER'),
+	    'HOST': CONFIG.get('HOST'),
+	    'PASSWORD': CONFIG.get('PASSWORD')
     }
 }
 
